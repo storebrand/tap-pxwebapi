@@ -40,7 +40,7 @@ class TablesStream(pxwebapiStream):
     @property
     def path(self) -> str:
         """Return API endpoint path string."""
-        return f"no/table/{self.table_config['table_id']}"
+        return f"en/table/{self.table_config['table_id']}"
     
     @property
     def name(self) -> str:
