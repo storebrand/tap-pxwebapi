@@ -9,6 +9,7 @@ from singer_sdk import typing as th  # JSON Schema typing helpers
 from typing import Any, Callable, Iterable
 from tap_pxwebapi.client import pxwebapiStream
 import requests
+from functools import cached_property
 
 # TODO: Delete this is if not using json files for schema definition
 SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
@@ -154,7 +155,7 @@ class TablesStream(pxwebapiStream):
         
 
 
-    @property
+    @cached_property
     def schema(self) -> th.PropertiesList:
         
         r = requests.get(self.url_base + self.path)
