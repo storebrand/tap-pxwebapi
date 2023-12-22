@@ -1,0 +1,212 @@
+{
+    "version": "2.0",
+    "class": "dataset",
+    "label": "13861: Lønnsfordelingen belyst ved ulikhetsmålene Gini-koeffisient og P90/P10, etter næring (SN2007), statistikkvariabel og år",
+    "source": "Statistisk sentralbyrå",
+    "updated": "2023-02-02T07:00:00Z",
+    "note": [
+      "Vi kan ikke oppgi tall for næringene «T Lønnet arbeid i private husholdninger», «U Internasjonale organisasjoner og organer» og «Z Ufordelt næring» grunnet få observasjoner."
+    ],
+    "role": {
+      "time": [
+        "Tid"
+      ],
+      "metric": [
+        "ContentsCode"
+      ]
+    },
+    "id": [
+      "NACE2007",
+      "ContentsCode",
+      "Tid"
+    ],
+    "size": [
+      4,
+      2,
+      7
+    ],
+    "dimension": {
+      "NACE2007": {
+        "label": "næring (SN2007)",
+        "category": {
+          "index": {
+            "A-Z": 0,
+            "A": 1,
+            "B": 2,
+            "C": 3
+          },
+          "label": {
+            "A-Z": "Alle næringer",
+            "A": "Jordbruk, skogbruk og fiske",
+            "B": "Bergverksdrift og utvinning",
+            "C": "Industri"
+          }
+        },
+        "extension": {
+          "elimination": true,
+          "eliminationValueCode": "A-Z",
+          "show": "code_value"
+        },
+        "link": {
+          "describedby": [
+            {
+              "extension": {
+                "NACE2007": "urn:ssb:classification:klass:6"
+              }
+            }
+          ]
+        }
+      },
+      "ContentsCode": {
+        "label": "statistikkvariabel",
+        "category": {
+          "index": {
+            "Ginikoeffisient": 0,
+            "P90P10": 1
+          },
+          "label": {
+            "Ginikoeffisient": "Ginikoeffisient",
+            "P90P10": "P90/P10"
+          },
+          "note": {
+            "Ginikoeffisient": [
+              "Gini-koeffisienten er et summarisk mål som varierer fra 0 (minst ulikhet) og 1 (størst ulikhet)."
+            ],
+            "P90P10": [
+              "P90/P10 viser til forholdstallet mellom lønnen til den personen som befinner seg mellom desil 9 og desil 10 (P90) og lønnen til den personen som befinner seg mellom desil 1 og desil 2 (P10)."
+            ]
+          },
+          "unit": {
+            "Ginikoeffisient": {
+              "base": "ginikoeffisient",
+              "decimals": 3
+            },
+            "P90P10": {
+              "base": "forholdstall",
+              "decimals": 1
+            }
+          }
+        },
+        "extension": {
+          "elimination": false,
+          "refperiod": {
+            "Ginikoeffisient": "",
+            "P90P10": ""
+          },
+          "show": "value"
+        }
+      },
+      "Tid": {
+        "label": "år",
+        "category": {
+          "index": {
+            "2016": 0,
+            "2017": 1,
+            "2018": 2,
+            "2019": 3,
+            "2020": 4,
+            "2021": 5,
+            "2022": 6
+          },
+          "label": {
+            "2016": "2016",
+            "2017": "2017",
+            "2018": "2018",
+            "2019": "2019",
+            "2020": "2020",
+            "2021": "2021",
+            "2022": "2022"
+          }
+        },
+        "extension": {
+          "elimination": false,
+          "show": "code"
+        }
+      }
+    },
+    "extension": {
+      "px": {
+        "infofile": "None",
+        "tableid": "13861",
+        "decimals": 1,
+        "official-statistics": true,
+        "aggregallowed": false,
+        "language": "no",
+        "matrix": "Ginikoeffisient",
+        "subject-code": "al"
+      },
+      "contact": [
+        {
+          "name": "Håkon Grini",
+          "phone": "482 05 163",
+          "mail": "gri@ssb.no",
+          "raw": "Håkon Grini, Statistisk sentralbyrå# +47 482 05 163#gri@ssb.no"
+        },
+        {
+          "name": "Knut Snellingen Bye",
+          "phone": "408 11 326",
+          "mail": "ksb@ssb.no",
+          "raw": "Knut Snellingen Bye, Statistisk sentralbyrå# +47 408 11 326#ksb@ssb.no"
+        }
+      ]
+    },
+    "value": [
+      0.205,
+      0.204,
+      0.206,
+      0.206,
+      0.206,
+      0.209,
+      0.211,
+      2.3,
+      2.3,
+      2.3,
+      2.3,
+      2.3,
+      2.3,
+      2.3,
+      0.215,
+      0.224,
+      0.221,
+      0.221,
+      0.227,
+      0.228,
+      0.232,
+      2.4,
+      2.5,
+      2.6,
+      2.6,
+      2.6,
+      2.7,
+      2.7,
+      0.226,
+      0.219,
+      0.227,
+      0.226,
+      0.222,
+      0.221,
+      0.233,
+      2.7,
+      2.6,
+      2.7,
+      2.7,
+      2.6,
+      2.6,
+      2.8,
+      0.205,
+      0.203,
+      0.205,
+      0.204,
+      0.202,
+      0.204,
+      0.207,
+      2.3,
+      2.2,
+      2.3,
+      2.3,
+      2.2,
+      2.3,
+      2.3
+    ]
+  }
+  
