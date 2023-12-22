@@ -1,0 +1,110 @@
+{
+    "title": "13861: Lønnsfordelingen belyst ved ulikhetsmålene Gini-koeffisient og P90/P10, etter næring (SN2007), kjønn, statistikkvariabel og år",
+    "variables": [
+      {
+        "code": "NACE2007",
+        "text": "næring (SN2007)",
+        "values": [
+          "A-Z",
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "Z"
+        ],
+        "valueTexts": [
+          "Alle næringer",
+          "Jordbruk, skogbruk og fiske",
+          "Bergverksdrift og utvinning",
+          "Industri",
+          "Elektrisitets-, gass-, damp- og varmtvannsforsyning",
+          "Vann, avløp, renovasjon",
+          "Bygge- og anleggsvirksomhet",
+          "Varehandel, reparasjon av motorvogner",
+          "Transport og lagring",
+          "Overnattings- og serveringsvirksomhet",
+          "Informasjon og kommunikasjon",
+          "Finansierings- og forsikringsvirksomhet",
+          "Omsetning og drift av fast eiendom",
+          "Faglig, vitenskapelig og teknisk tjenesteyting",
+          "Forretningsmessig tjenesteyting",
+          "Offentlig administrasjon og forsvar, og trygdeordninger underlagt offentlig forvaltning",
+          "Undervisning",
+          "Helse- og sosialtjenester",
+          "Kultur, underholdning og fritid",
+          "Annen tjenesteyting",
+          "Lønnet arbeid i private husholdninger",
+          "Internasjonale organisasjoner og organer",
+          "Ufordelt næring"
+        ],
+        "elimination": true
+      },
+      {
+        "code": "Kjonn",
+        "text": "kjønn",
+        "values": [
+          "0",
+          "1",
+          "2"
+        ],
+        "valueTexts": [
+          "Begge kjønn",
+          "Menn",
+          "Kvinner"
+        ],
+        "elimination": true
+      },
+      {
+        "code": "ContentsCode",
+        "text": "statistikkvariabel",
+        "values": [
+          "Ginikoeffisient",
+          "P90P10"
+        ],
+        "valueTexts": [
+          "Ginikoeffisient",
+          "P90/P10"
+        ]
+      },
+      {
+        "code": "Tid",
+        "text": "år",
+        "values": [
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "valueTexts": [
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "time": true
+      }
+    ]
+  }

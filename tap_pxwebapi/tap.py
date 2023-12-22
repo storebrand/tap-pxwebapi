@@ -45,15 +45,15 @@ class Tappxwebapi(Tap):
                                 th.Property(
                                     "values",
                                     th.ArrayType(th.StringType),
-                                )
+                                ),
                             )
-                        )
-                    )
+                        ),
+                    ),
                 )
             ),
             required=True,
             description="Tables to read",
-        )
+        ),
     ).to_dict()
 
     def discover_streams(self) -> list[streams.TablesStream]:
@@ -64,10 +64,7 @@ class Tappxwebapi(Tap):
         """
 
         for table in self.config["tables"]:
-            yield streams.TablesStream(
-                tap=self,
-                table_config=table
-            )
+            yield streams.TablesStream(tap=self, table_config=table)
 
 
 if __name__ == "__main__":
