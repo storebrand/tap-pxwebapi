@@ -77,4 +77,5 @@ def test_stuff(capsys):
     schema_records = [msg for msg in json_messages if msg.get("type") == "SCHEMA"]
 
     assert len(data_records) == 4*2*7
+    assert len(schema_records) == 1
     assert schema.call_count == 1
