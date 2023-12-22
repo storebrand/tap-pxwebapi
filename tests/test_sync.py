@@ -17,27 +17,20 @@ SAMPLE_CONFIG = {
     ],
 }
 
-# SAMPLE_REQUEST = {
-#     "query": [
-#       {
-#         "code": "NACE2007",
-#         "selection": {
-#           "filter": "item",
-#           "values": ["A-Z","A","B","C"]
-#         }
-#       },
-#       {
-#         "code": "Tid",
-#         "selection": {
-#           "filter": "item",
-#           "values": ["2016","2017","2018","2019","2020","2021","2022"]
-#         }
-#       }
-#     ],
-#     "response": {
-#       "format": "json-stat2"
-#     }
-#   }
+SAMPLE_REQUEST = {
+    "query": [
+      {
+        "code": "NACE2007",
+        "selection": {
+          "filter": "item",
+          "values": ["A-Z","A","B","C"]
+        }
+      }
+    ],
+    "response": {
+      "format": "json-stat2"
+    },
+  }
 
 SCHEMA_RESPONSE_TXT = open(
     "tests/schema_responses/13861.json"
@@ -50,6 +43,11 @@ DATA_RESPONSE_TXT = open(
 SCHEMA_RESPONSE = json.loads(SCHEMA_RESPONSE_TXT)
 DATA_RESPONSE = json.loads(DATA_RESPONSE_TXT)
 
+def validate_request(request):
+    jbod = request.body.decode("utf-8")
+
+    assert jbod == json.dumps(SAMPLE_REQUEST)
+    return (200, {}, DATA_RESPONSE_TXT)
 
 @responses.activate
 def test_stuff(capsys):
@@ -57,7 +55,7 @@ def test_stuff(capsys):
     responses.add_callback(
         responses.POST,
         re.compile(r"https://data.ssb.no/api/v0/en/table/13861"),
-        callback=lambda _: (200, {}, DATA_RESPONSE_TXT),
+        callback=validate_request,
     )
 
     schema = responses.add(

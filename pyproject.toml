@@ -21,6 +21,10 @@ pytest = ">=7.4.0"
 singer-sdk = { version="~=0.32.0", extras = ["testing"] }
 responses = ">0.1.0"
 pytest-cov = ">=3.0.0"
+tox = "^3.14.3"
+isort = "^5.10.1"
+flake8 = "^3.9.2"
+black = "^22.3.0"
 
 [tool.poetry.extras]
 s3 = ["fs-s3fs"]
