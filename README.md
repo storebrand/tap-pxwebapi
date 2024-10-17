@@ -1,3 +1,6 @@
+# ⚠️ This repository is no longer being maintained
+Storebrand have moved on from Meltano, and we're therefore no longer maintaining this repository. 
+
 # tap-pxwebapi
 
 `tap-pxwebapi` is a Singer tap for the PxWebApi used by statistical agencies in Norway, Sweden, Denmark and possibly some other countries to disseminate official statistics.
